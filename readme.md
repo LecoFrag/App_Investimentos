@@ -32,10 +32,10 @@ O projeto aborda a necessidade de uma análise mais profunda do que a oferecida 
 A modelagem de dados e a arquitetura do sistema foram projetadas para serem eficientes e escaláveis. 
 
 a. Arquivos do Projeto:
-A solução conta com alguns arquivos que serão necessários para o funcionamento correto do aplicativo:
+A solução conta com alguns arquivos que serão necessários para a inicialização e funcionamento correto do aplicativo. Todos eles devem ser colocados na mesma pasta antes de rodar pela primeira vez o "Atualiza_Banco_Dados.py".
 - Atualiza_Banco_Dados.py: Este é o script principal para a coleta e o armazenamento dos dados. Ele se conecta a APIs de mercado financeiro e a um banco de dados local para manter as informações atualizadas.
 - Streamlit_App_Investimentos.py: Este é o aplicativo web interativo que serve como interface do usuário para explorar os dados e executar análises complexas.
-- dados_investimentos.db: Este é o banco de dados SQLite que serve como a principal fonte de dados para o projeto, e é gerado na primeira vez que o script "Atualiza_Banco_Dados.py" é rodado. Ele armazena dados históricos de ações, dados fundamentais de empresas, e indicadores macroeconômicos como CDI, IPCA e IBOV.
+- dados_investimentos.db: Este é o banco de dados SQLite que serve como a principal fonte de dados para o projeto, e é gerado automaticamente na primeira vez que o script "Atualiza_Banco_Dados.py" é rodado. Ele armazena dados históricos de ações, dados fundamentais de empresas, e indicadores macroeconômicos como CDI, IPCA e IBOV.
 - acoes_listadas_b3.csv: Um arquivo CSV que contém a lista de tickers de ações negociadas na B3. Este arquivo é usado pelo script de atualização para saber quais ativos buscar.
 - dados_fundamentais_b3.csv: Um arquivo CSV que contém dados fundamentais das empresas listadas. Este arquivo é importado para a tabela dados_fundamentais no banco de dados.
 - Carteiras.xlsx: Esse não é um arquivo necessário para rodar o aplicativo, mas ele representa a forma mais prática de subir uma carteira personalizada na plataforma. Já há um exemplo de ativos preenchido.
@@ -91,4 +91,5 @@ Pontifícia Universidade Católica do Rio de Janeiro
 
 
 Curso de Pós Graduação *Business Intelligence Master*
+
 
