@@ -38,6 +38,7 @@ A solução conta com alguns arquivos que serão necessários para o funcionamen
 - dados_investimentos.db: Este é o banco de dados SQLite que serve como a principal fonte de dados para o projeto, e é gerado na primeira vez que o script "Atualiza_Banco_Dados.py" é rodado. Ele armazena dados históricos de ações, dados fundamentais de empresas, e indicadores macroeconômicos como CDI, IPCA e IBOV.
 - acoes_listadas_b3.csv: Um arquivo CSV que contém a lista de tickers de ações negociadas na B3. Este arquivo é usado pelo script de atualização para saber quais ativos buscar.
 - dados_fundamentais_b3.csv: Um arquivo CSV que contém dados fundamentais das empresas listadas. Este arquivo é importado para a tabela dados_fundamentais no banco de dados.
+- Carteiras.xlsx: Esse não é um arquivo necessário para rodar o aplicativo, mas ele representa a forma mais prática de subir uma carteira personalizada na plataforma. Já há um exemplo de ativos preenchido.
 
 b. Coleta e Armazenamento de Dados:
 O banco de dados SQLite (dados_investimentos.db) é o coração do sistema, servindo como a principal fonte de dados. Tabelas são criadas para armazenar diferentes tipos de informações:
@@ -87,5 +88,6 @@ O trabalho conclui que esta aplicação atende perfeitamente a necessidade de um
 Matrícula: 231.101.014
 
 Pontifícia Universidade Católica do Rio de Janeiro
+
 
 Curso de Pós Graduação *Business Intelligence Master*
