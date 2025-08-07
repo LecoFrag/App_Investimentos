@@ -42,18 +42,18 @@ A solução conta com alguns arquivos que serão necessários para o funcionamen
 
 b. Coleta e Armazenamento de Dados:
 O banco de dados SQLite (dados_investimentos.db) é o coração do sistema, servindo como a principal fonte de dados. Tabelas são criadas para armazenar diferentes tipos de informações:
-    - dados_historicos: Preços de fechamento, volumes, dividendos e outros dados diários para ações.
-    - dados_fundamentais: Informações detalhadas sobre a empresa, como setor, receita, P/L, ROE, etc.
-    - dados_indicadores: Taxas de referência macroeconômicas diárias (CDI, IPCA, IBOV) para comparação de performance.
-    - carteiras: Detalhes sobre os ativos que compõem as carteiras personalizadas do usuário.
+- dados_historicos: Preços de fechamento, volumes, dividendos e outros dados diários para ações.
+- dados_fundamentais: Informações detalhadas sobre a empresa, como setor, receita, P/L, ROE, etc.
+- dados_indicadores: Taxas de referência macroeconômicas diárias (CDI, IPCA, IBOV) para comparação de performance.
+- carteiras: Detalhes sobre os ativos que compõem as carteiras personalizadas do usuário.
 O script Atualiza_Banco_Dados.py, quando rodado pela primeira vez, cria a base de dados junto com a estruturação das suas tabelas. Em seguida, faz o download dos dados dos ativos da b3, utilizando a biblioteca yfinance para dados de mercado e requests para buscar indicadores do Banco Central do Brasil (BCB). Após a primeira atualização, as subsequentes buscarão apenas os novos dados, atualizando todas as tabelas necessárias.
 
 
 c. Modelos de Análise e Otimização:
-    - Análise de Carteira: A performance da carteira é calculada somando-se o valor de mercado de cada ativo diariamente. O retorno é comparado ao CDI, IPCA e IBOV. Métricas de risco como o VaR (Value at Risk) são calculadas para a carteira agregada.
-    - Hierarchical Risk Parity (HRP): Um modelo avançado de alocação de portfólio é implementado usando a biblioteca pypfopt. O HRP é utilizado para agrupar ativos com base em suas correlações e alocar pesos que equalizam o risco, oferecendo uma alternativa à otimização tradicional de média-variância, que pode ser sensível a erros de estimativa de parâmetros.
-    - Backtesting de Estratégias: O sistema simula o desempenho de diferentes estratégias de alocação (HRP, Volatilidade Mínima, Equal Weight) ao longo de um período histórico definido pelo usuário. Ele considera aportes iniciais e mensais para replicar um cenário de investimento contínuo.
-    - Análise Técnica: O recurso de detecção de rompimentos técnicos identifica ativos cujos preços de fechamento superam ou ficam abaixo da banda de dois desvios-padrão de uma média móvel, fornecendo um sinal visual para potenciais oportunidades de compra ou venda.
+- Análise de Carteira: A performance da carteira é calculada somando-se o valor de mercado de cada ativo diariamente. O retorno é comparado ao CDI, IPCA e IBOV. Métricas de risco como o VaR (Value at Risk) são calculadas para a carteira agregada.
+- Hierarchical Risk Parity (HRP): Um modelo avançado de alocação de portfólio é implementado usando a biblioteca pypfopt. O HRP é utilizado para agrupar ativos com base em suas correlações e alocar pesos que equalizam o risco, oferecendo uma alternativa à otimização tradicional de média-variância, que pode ser sensível a erros de estimativa de parâmetros.
+- Backtesting de Estratégias: O sistema simula o desempenho de diferentes estratégias de alocação (HRP, Volatilidade Mínima, Equal Weight) ao longo de um período histórico definido pelo usuário. Ele considera aportes iniciais e mensais para replicar um cenário de investimento contínuo.
+- Análise Técnica: O recurso de detecção de rompimentos técnicos identifica ativos cujos preços de fechamento superam ou ficam abaixo da banda de dois desvios-padrão de uma média móvel, fornecendo um sinal visual para potenciais oportunidades de compra ou venda.
 
 
 ### 3. Resultados
@@ -91,3 +91,4 @@ Pontifícia Universidade Católica do Rio de Janeiro
 
 
 Curso de Pós Graduação *Business Intelligence Master*
+
